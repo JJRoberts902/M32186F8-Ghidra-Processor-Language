@@ -1,0 +1,15 @@
+Reference used for this cleanup:
+Renesas 32185/32186 Group Hardware Manual, Rev.1.10, May 15, 2007.
+
+Key M32186F8 facts used:
+- M32R-FPU core, max 80 MHz.
+- M32186F8 internal flash: 1 Mbyte / 1024 Kbytes.
+- M32186F8 internal RAM: 64 Kbytes.
+- Internal ROM/flash allocation: H'0000 0000 to H'000F FFFF.
+- SFR area: H'0080 0000 to H'0080 3FFF.
+- RAM allocation: H'0080 4000 to H'0081 3FFF.
+- CAN0 register block starts at H'0080 1000.
+- CAN1 register block starts at H'0080 1400.
+- ICU vector pointer entries include CAN0 at H'0000 010C and CAN1 at H'0000 0110.
+
+Renesas does not provide Mitsubishi tuning map definitions. This cleanup only strengthens the MCU/language foundation.

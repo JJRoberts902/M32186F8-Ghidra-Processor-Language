@@ -1,0 +1,13 @@
+Run M32R_Mitsubishi_AutoSetup.java after importing a 1MB Mitsubishi M32R ROM.
+Recommended language: M32R / mitsubishi-fp8000.
+Recommended ROM base: 0x00000000.
+Then run Ghidra Auto Analyze again.
+
+The script will:
+- ensure SFR 0x00800000-0x00803FFF exists
+- ensure RAM 0x00804000-0x00813FFF exists
+- label common Mitsubishi ROM ID candidate locations
+- label M32186F8 flash block boundaries
+- parse ICU vector pointer entries at 0x94-0x110
+- create function references for valid ISR targets
+- scan for likely 32-bit function-pointer tables in internal flash
